@@ -1,0 +1,13 @@
+nav ul li a span.tw, ul li a:hover span.en {
+	display: inline;
+}
+
+nav ul li a:hover span.tw, ul li a span.en {
+	display: none;
+}
+
+#banner { 
+	height: 400px; 
+	width: 1000px; 
+	overflow: hidden; 
+}
