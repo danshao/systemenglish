@@ -385,7 +385,7 @@ footer a {
   margin: 17px 0;
   display: inline-block;
   background: url(../img/logo.png) 0 0 no-repeat;
-  width: 300px;
+  width: 265px;
   height: 44px;
 }
 
@@ -819,6 +819,7 @@ footer a {
     background-size: 175px 30px;
     width: 175px;
     height: 30px;
+
   }
   #main-nav li {
     line-height: 52px;

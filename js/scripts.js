@@ -108,7 +108,7 @@ $(function(){
     if(wWidth <= 480) {
       mapHeight = 415;
       contentHeight = 380;
-      contentPadding = 80;
+      contentPadding = 50;
       iframeHeight = 980;
     }
     if((wWidth > 480) && (wWidth <= 768)){
@@ -242,7 +242,6 @@ $(function(){
       });
 
   }
-
   initialize();
 
 });
