@@ -1,4 +1,11 @@
 /* ======================================== Base ========== */
+#preload-01 { background: url('img/photos/frontpage_banner1.jpg') no-repeat -9999px -9999px; }
+#preload-02 { background: url('img/photos/frontpage_banner2.jpg') no-repeat -9999px -9999px; }
+#preload-03 { background: url('img/photos/frontpage_banner3.jpg') no-repeat -9999px -9999px; }
+#preload-04 { background: url('img/photos/frontpage_banner4.jpg') no-repeat -9999px -9999px; }
+#preload-05 { background: url('img/photos/frontpage_banner5.jpg') no-repeat -9999px -9999px; }
+#preload-06 { background: url('img/photos/frontpage_banner6.jpg') no-repeat -9999px -9999px; }
+#preload-07 { background: url('img/photos/frontpage_banner7.jpg') no-repeat -9999px -9999px; }
 
 html {
   padding: 0;
@@ -557,16 +564,15 @@ footer a {
 
 /* ======================================== Register ========== */
 
-#register {
-  text-align: center;
+#contact {
   background-image: none;
 }
 
-#register .container {
+#contact .container {
   padding-bottom: 0;
 }
 
-#register h2 {
+#contact h2 {
   margin-bottom: 15px;
 }
 
@@ -1070,19 +1076,6 @@ footer a {
 	.no-touch #teacher-list .maia-col-3:nth-child(3) li:last-child .wrap {
 		min-height: 476px;
 	}
-
-	.no-touch[lang="pt-BR"] #teacher-list .maia-col-3:nth-child(1) li:last-child .wrap {
-		min-height: 177px;
-	}
-	.no-touch[lang="pt-BR"] #teacher-list .maia-col-3:nth-child(2) li:last-child .wrap {
-		min-height: 217px;
-	}
-
-	.no-touch[lang="pt-BR"] #teacher-list .maia-col-3:nth-child(3) li:last-child .wrap,
-	.no-touch[lang="pt-BR"] #teacher-list .maia-col-3:nth-child(4) li:last-child .wrap {
-		min-height: 420px;
-	}
-
 
 }
 

@@ -103,7 +103,7 @@ $(function(){
       $('#main-nav').prependTo('#home');
     }
 
-    var registrationForm = $('#registration-form');
+    var registrationForm = $('#contact-form');
 
     if(wWidth <= 480) {
       mapHeight = 415;
