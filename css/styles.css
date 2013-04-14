@@ -1,11 +1,4 @@
 /* ======================================== Base ========== */
-#preload-01 { background: url('img/photos/frontpage_banner1.jpg') no-repeat -9999px -9999px; }
-#preload-02 { background: url('img/photos/frontpage_banner2.jpg') no-repeat -9999px -9999px; }
-#preload-03 { background: url('img/photos/frontpage_banner3.jpg') no-repeat -9999px -9999px; }
-#preload-04 { background: url('img/photos/frontpage_banner4.jpg') no-repeat -9999px -9999px; }
-#preload-05 { background: url('img/photos/frontpage_banner5.jpg') no-repeat -9999px -9999px; }
-#preload-06 { background: url('img/photos/frontpage_banner6.jpg') no-repeat -9999px -9999px; }
-#preload-07 { background: url('img/photos/frontpage_banner7.jpg') no-repeat -9999px -9999px; }
 
 html {
   padding: 0;
