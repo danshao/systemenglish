@@ -134,6 +134,7 @@ $(function(){
 			}
     }
 
+    console.log(contentPadding);
     headerMap.css({
       width: wWidth,
       height: mapHeight,
@@ -227,6 +228,18 @@ $(function(){
 	});
 
   function initialize() {
+    /*var images = [ "img/photos/frontpage_banner1.jpg", "img/photos/frontpage_banner2.jpg", "img/photos/frontpage_banner3.jpg", "img/photos/frontpage_banner4.jpg",
+                   "img/photos/frontpage_banner5.jpg", "img/photos/frontpage_banner6.jpg", "img/photos/frontpage_banner7.jpg"];
+    var currentImage = 0;
+
+    function changeBackground() {
+        $( '#slider').attr('src', images[ ++currentImage ]);
+        if ( currentImage >= images.length - 1 ) {
+            currentImage -= images.length;
+        }
+    }
+
+    setInterval( changeBackground, 5000 );  */
     $("#slider").slidesjs({
         navigation: {
           active: false,
@@ -240,7 +253,7 @@ $(function(){
         pagination: false,
         generatePagination: false
       });
-  }
+  } 
   initialize();
 
 });
