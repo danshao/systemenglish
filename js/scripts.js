@@ -134,7 +134,7 @@ $(function(){
 			}
     }
 
-    console.log(contentPadding);
+    // console.log(contentPadding);
     headerMap.css({
       width: wWidth,
       height: mapHeight,

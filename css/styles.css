@@ -426,7 +426,7 @@ footer a {
 
 
 
-/* ======================================== Events ========== */
+/* ======================================== Class ========== */
 
 #class {
   background: url(../img/bg-shadow.png) no-repeat top center;
@@ -531,31 +531,31 @@ footer a {
 	color: #444;
 }
 
-/* ======================================== Travel ========== */
+/* ======================================== schedule ========== */
 
-#travel {
+#schedule {
 	background: url(../img/bg-shadow-btm.png) no-repeat bottom center;
 }
 
-#travel h3 {
+#schedule h3 {
 	margin: 5px 0 20px;
 }
 
-#travel h2.last {
+#schedule h2.last {
 	margin-top: 0;
 }
 
-#travel .box {
+#schedule .box {
 	margin-bottom: 30px;
 }
 
-#travel p {
+#schedule p {
 	margin-bottom: 0;
 }
 
 
 
-/* ======================================== Register ========== */
+/* ======================================== Contact ========== */
 
 #contact {
   background-image: none;
@@ -865,11 +865,11 @@ footer a {
     padding: 0 15px;
   }
 
-  #travel .box .wrap {
+  #schedule .box .wrap {
     padding: 0 15px;
 	    max-width: 306px;
   }
-	html[lang="pt-BR"] #travel h3 {
+	html[lang="pt-BR"] #schedule h3 {
 		min-height: 0 !important;
 	}
   .wrap-img {
@@ -985,7 +985,7 @@ footer a {
 	#optional-sessions h3 {
 		min-height: 60px;
 	}
-	html[lang="pt-BR"] #travel h3 {
+	html[lang="pt-BR"] #schedule h3 {
 		min-height: 40px;
 	}
 	.touch[lang="pt-BR"] #main-nav li {
