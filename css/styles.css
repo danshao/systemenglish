@@ -385,7 +385,7 @@ footer a {
   margin: 17px 0;
   display: inline-block;
   background: url(../img/logo.png) 0 0 no-repeat;
-  width: 265px;
+  width: 480px;
   height: 44px;
 }
 
@@ -815,8 +815,8 @@ footer a {
     margin-right: auto;
   }
   #nav-logo {
-    background-size: 175px 30px;
-    width: 175px;
+    background-size: 480px 30px;
+    width: 480px;
     height: 30px;
 
   }
