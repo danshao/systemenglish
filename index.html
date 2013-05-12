@@ -789,9 +789,10 @@
                                 <div class="maia-cols-10">
                                     <input type="text" name="email" id="email" placeholder="danshao@0x011.com" required>
                                 </div>
-                                <label>What's up?</label>
-                                <textarea rows="10" name="message" id="message" required></textarea>
-                                <br />  
+                                <div class="maia-cols-10">
+                                    <label>What's up?</label>
+                                    <textarea rows="10" name="message" id="message" required></textarea>
+                                </div>  
                                 <button type="submit" id="submit" class="maia-button">Submit</button>
                             </form>
                         </div>
@@ -841,10 +842,9 @@
                     success: function(msg) {
                         // Check to see if the mail was successfully sent
                         if(msg=='Mail sent') {
-                            // hide submit button
-                            $('#contactForm #message').val('Message Sent!');
+                            alert('Message Sent.')
                         } else {
-                            alert('There was an error sending your email. Please try again.');
+                            alert('Please fill out the form completely.');
                         }
                     },
                     error: function(ob,errStr) {
