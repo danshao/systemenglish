@@ -776,26 +776,24 @@
                                 +886 2 2545 2110<br />
                                 +886 2 2716 4335        
                             </div>
-                            <div id="contactForm">
-                                <form method="post" action="submit.php">
-                                    <div class="maia-cols-2">
-                                        <label class="inline">姓名</label>
-                                    </div>
-                                    <div class="maia-cols-10">
-                                        <input type="text" name="name" id="name" placeholder="Dan Shao" required>
-                                    </div>
-                                    <div class="maia-cols-2">
-                                        <label class="inline">Email</label>
-                                    </div>
-                                    <div class="maia-cols-10">
-                                        <input type="text" name="email" id="email" placeholder="danshao@0x011.com" required>
-                                    </div>
-                                    <label>What's up?</label>
-                                    <textarea rows="10" name="message" id="message" required></textarea>
-                                    <br />  
-                                    <button type="submit" id="submit" class="maia-button">Submit</button>
-                                </form>
-                            </div>
+                            <form id = "contactForm" method = "post" action = "submit.php">
+                                <div class="maia-cols-2">
+                                    <label class="inline">姓名</label>
+                                </div>
+                                <div class="maia-cols-10">
+                                    <input type="text" name="name" id="name" placeholder="Dan Shao" required>
+                                </div>
+                                <div class="maia-cols-2">
+                                    <label class="inline">Email</label>
+                                </div>
+                                <div class="maia-cols-10">
+                                    <input type="text" name="email" id="email" placeholder="danshao@0x011.com" required>
+                                </div>
+                                <label>What's up?</label>
+                                <textarea rows="10" name="message" id="message" required></textarea>
+                                <br />  
+                                <button type="submit" id="submit" class="maia-button">Submit</button>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -824,43 +822,41 @@
     <script type="text/javascript" src="js/jquery.slides.min.js"></script>
     <script type="text/javascript" src="js/scripts.js"></script>
     <script type="text/javascript">
-    $(document).ready(function() {
-        $('#contactForm #submit').click(function() {
-            // Get the data from the form
-            var name=$('#contactForm #name').val();
-            var email=$('#contactForm #email').val();
-            var message=$('#contactForm #message').val();
+        $(document).ready(function() {
+            $('#contactForm #submit').click(function() {
+                // Get the data from the form
+                var name=$('#contactForm #name').val();
+                var email=$('#contactForm #email').val();
+                var message=$('#contactForm #message').val();
 
-            $.ajaxSetup ({
-                cache: false
-            });
-            var dataString = 'name='+ name + '&email=' + email + '&message=' + message;
-            $.ajax({
-                type: "POST",
-                url: "submit.php",
-                data: dataString,
-                success: function(msg) {
-                    // Check to see if the mail was successfully sent
-                    if(msg=='Mail sent') {
-                        // hide submit button
-                        $('#contactForm #submit').delay(2000).fadeOut(400);
-                        $('#contactForm #message').val('Message Sent!');
-                    } else {
+                $.ajaxSetup ({
+                    cache: false
+                });
+                
+                var dataString = 'name='+ name + '&email=' + email + '&message=' + message;
+                $.ajax({
+                    type: "POST",
+                    url: "api/submit.php",
+                    data: dataString,
+                    success: function(msg) {
+                        // Check to see if the mail was successfully sent
+                        if(msg=='Mail sent') {
+                            // hide submit button
+                            $('#contactForm #message').val('Message Sent!');
+                        } else {
+                            alert('There was an error sending your email. Please try again.');
+                        }
+                    },
+                    error: function(ob,errStr) {
+                        // $('#contactForm #formProgress').html('');
                         alert('There was an error sending your email. Please try again.');
+                        // Activate the submit button
+                        // $('#contactForm #submit').attr("disabled", "");
                     }
-                    // Activate the submit button
-                    $('#contactForm #submit').attr("disabled", "");
-                },
-                error: function(ob,errStr) {
-                    // $('#contactForm #formProgress').html('');
-                    alert('There was an error sending your email. Please try again.');
-                    // Activate the submit button
-                    // $('#contactForm #submit').attr("disabled", "");
-                }
+                });
+                return false;
             });
-            return false;
         });
-    });
     </script>
 </body>
 </html>
