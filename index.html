@@ -842,13 +842,20 @@
                 success: function(msg) {
                     // Check to see if the mail was successfully sent
                     if(msg=='Mail sent') {
-                        alert('Message sent');
+                        // hide submit button
+                        $('#contactForm #submit').delay(2000).fadeOut(400);
+                        $('#contactForm #message').val('Message Sent!');
                     } else {
                         alert('There was an error sending your email. Please try again.');
                     }
+                    // Activate the submit button
+                    $('#contactForm #submit').attr("disabled", "");
                 },
                 error: function(ob,errStr) {
+                    // $('#contactForm #formProgress').html('');
                     alert('There was an error sending your email. Please try again.');
+                    // Activate the submit button
+                    // $('#contactForm #submit').attr("disabled", "");
                 }
             });
             return false;

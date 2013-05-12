@@ -16,7 +16,7 @@
     $body.='Email: '.$email."\n";
     $body.='Message: '."\n".$message."\n";
 
-    if(mail($to, $body, $headers)) {
+    if(mail($to, $subject, $body, $headers)) {
         die('Mail sent');
     } else {
         die('Error: Mail failed');
