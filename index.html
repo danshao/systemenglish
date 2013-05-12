@@ -776,23 +776,23 @@
                                 +886 2 2545 2110<br />
                                 +886 2 2716 4335        
                             </div>
-                            <form id="contact-form">
+                            <form method="post" action="submit.php">
                                 <div class="maia-cols-2">
                                     <label class="inline">姓名</label>
                                 </div>
                                 <div class="maia-cols-10">
-                                    <input type="text" id="yourName" placeholder="Dan Shao">
+                                    <input type="text" id="name" placeholder="Dan Shao" required>
                                 </div>
                                 <div class="maia-cols-2">
                                     <label class="inline">Email</label>
                                 </div>
                                 <div class="maia-cols-10">
-                                    <input type="text" id="yourEmail" placeholder="danshao@0x011.com">
+                                    <input type="email" id="email" placeholder="danshao@0x011.com" required>
                                 </div>
                                 <label>What's up?</label>
-                                <textarea rows="10"></textarea>
+                                <textarea rows="10" name="message" required></textarea>
                                 <br />  
-                                <button type="submit" class="maia-button">Submit</button>
+                                <button type="submit" name="submit" class="maia-button">Submit</button>
                             </form>
                         </div>
                     </div>
@@ -804,7 +804,7 @@
           <div class="container">
           </div>
         </footer>
-    
+
     </div>
     <!-- END: #page-wrap -->
 
