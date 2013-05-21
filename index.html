@@ -23,7 +23,7 @@
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        })(window,document,'script','http://www.google-analytics.com/analytics.js','ga');
 
         ga('create', 'UA-41019088-1', 'systemenglishschool.com');
         ga('send', 'pageview');
@@ -39,6 +39,7 @@
                 <div class="container">
                 <a href="#home" id="nav-logo"></a>
                 <ul class="unstyled">
+                    <li><a href="#notices"><font color="red">通知</font></a></li>
                     <li><a href="#about">關於我們</a></li>
                     <li><a href="#class">課程介紹</a></li>
                     <li><a href="#teacher">師資簡介</a></li>
@@ -74,6 +75,30 @@
             </div>
         </section>
         
+        <section id="notices">
+            <div class="container">
+                <div class="maia-cols">
+                    <div class="maia-col-5">
+                        <div class="wrap">
+                            <br>
+                            <h2>本班自6/30起暑假放假兩週7/15至8/15因教室裝潢暫時移至:「延壽皆374號」教室上課.</h2>
+                        </div>
+                    </div>
+                    <div class="maia-col-6"  id="map-wrapper">
+                        <div class="wrap">
+                        <!-- <img id="map-lrg" src="images/map-lrg.png" alt="" /> -->
+                            <div id="map-lrg-wrap">
+                                <img id="map-lrg-bg" class="photo" src="http://maps.googleapis.com/maps/api/staticmap?center=延壽皆374號&zoom=16&language=zh-TW&markers=size:medium%7Ccolor:red%7C延壽皆374號&size=504x513&key=AIzaSyBB972WDSLtssmQ1HgIj_KEqIjyhBoUK6o&sensor=false" />
+                            </div>
+                                <img id="map-sm" class="photo" src="http://maps.googleapis.com/maps/api/staticmap?center=延壽皆374號&zoom=16&language=zh-TW&markers=size:medium%7Ccolor:red%7C延壽皆374號&size=600x300&key=AIzaSyBB972WDSLtssmQ1HgIj_KEqIjyhBoUK6o&sensor=false" />
+                         </div>
+                    </div>
+                    <div class="maia-col-1">
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section id="about">
             <div class="container">
                 <h2 class="el-mobile">西斯頓的教學理念</h2>
@@ -870,5 +895,6 @@
             });
         });
     </script>
+
 </body>
 </html>
