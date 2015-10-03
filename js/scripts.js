@@ -253,6 +253,20 @@ $(function(){
         pagination: false,
         generatePagination: false
       });
+
+    $("#slider2").slidesjs({
+      navigation: {
+        active: false,
+        effect: "fade"
+      },
+      play: {
+        active: false,
+        effect: "slide",
+        auto: true
+      },
+      pagination: false,
+      generatePagination: false
+    });
   } 
   initialize();
 
