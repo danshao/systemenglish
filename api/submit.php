@@ -6,7 +6,7 @@
     $name=$_POST['name'];
     $email=$_POST['email'];
     $message=$_POST['message'];
-    $to='systemenglishschool@gmail.com';
+    $to='thesystemenglishschool@gmail.com';
     $headers = 'From: '.$email."\r\n" .
         'Reply-To: '.$email."\r\n" .
         'X-Mailer: PHP/' . phpversion();
