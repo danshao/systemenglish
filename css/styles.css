@@ -1080,3 +1080,57 @@ nav ul li a:hover span.tw, ul li a span.en {
   display: none;
 }
 
+#honor {
+   
+  /* Horizontal scroll
+
+  width: auto;
+  height: 100vh;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  */
+  /* Prevent vertical gaps */
+  line-height: 5px;
+
+  -webkit-column-count: 5;
+  -webkit-column-gap:   5px;
+  -moz-column-count:    5;
+  -moz-column-gap:      5px;
+  column-count:         5;
+  column-gap:           5px;
+}
+
+#honor img {
+  /* Just in case there are inline attributes */
+  width: 100% !important;
+  height: auto !important;
+}
+
+@media (max-width: 1200px) {
+  #honor {
+  -moz-column-count:    4;
+  -webkit-column-count: 4;
+  column-count:         4;
+  }
+}
+@media (max-width: 1000px) {
+  #honor {
+  -moz-column-count:    3;
+  -webkit-column-count: 3;
+  column-count:         3;
+  }
+}
+@media (max-width: 800px) {
+  #honor {
+  -moz-column-count:    2;
+  -webkit-column-count: 2;
+  column-count:         2;
+  }
+}
+@media (max-width: 400px) {
+  #honor {
+  -moz-column-count:    1;
+  -webkit-column-count: 1;
+  column-count:         1;
+  }
+}
