@@ -553,7 +553,27 @@ footer a {
 	margin-bottom: 0;
 }
 
+/* ======================================== honors ========== */
 
+#honors {
+  background: url(../img/bg-shadow-btm.png) no-repeat bottom center;
+}
+
+#honors h3 {
+  margin: 5px 0 20px;
+}
+
+#honors h2.last {
+  margin-top: 0;
+}
+
+#honors .box {
+  margin-bottom: 30px;
+}
+
+#honors p {
+  margin-bottom: 0;
+}
 
 /* ======================================== Contact ========== */
 
@@ -1080,64 +1100,19 @@ nav ul li a:hover span.tw, ul li a span.en {
   display: none;
 }
 
-#honor {
-  /* Horizontal scroll  */
-  width: 100%;
-  height: 100vh;
-  overflow-x: scroll;
-  overflow-y: hidden;
-
-  /* Prevent vertical gaps */
-  line-height: 5px;
-  
-  -webkit-column-count: 5;
-  -webkit-column-gap:   5px;
-  -moz-column-count:    5;
-  -moz-column-gap:      5px;
-  column-count:         5;
-  column-gap:           5px;
+.jssorb13 {
+    position: absolute;
 }
-
-#honor img {
-  /* Just in case there are inline attributes */
-  width: auto !important;
-  height : auto !important;
-  max-width: 100% !important;
-  max-height: 100% !important;
+.jssorb13 div, .jssorb13 div:hover, .jssorb13 .av {
+    position: absolute;
+    /* size of bullet elment */
+    width: 21px;
+    height: 21px;
+    background: url('img/b13.png') no-repeat;
+    overflow: hidden;
+    cursor: pointer;
 }
-
-@media {
-  #honor {
-  -moz-column-count:    2;
-  -webkit-column-count: 2;
-  column-count:         2;
-  }
-}
-@media (max-width: 1200px) {
-  #honor {
-  -moz-column-count:    2;
-  -webkit-column-count: 2;
-  column-count:         2;
-  }
-}
-@media (max-width: 1000px) {
-  #honor {
-  -moz-column-count:    2;
-  -webkit-column-count: 2;
-  column-count:         2;
-  }
-}
-@media (max-width: 800px) {
-  #honor {
-  -moz-column-count:    2;
-  -webkit-column-count: 2;
-  column-count:         2;
-  }
-}
-@media (max-width: 400px) {
-  #honor {
-  -moz-column-count:    1;
-  -webkit-column-count: 1;
-  column-count:         1;
-  }
-}
+.jssorb13 div { background-position: -5px -5px; }
+.jssorb13 div:hover, .jssorb13 .av:hover { background-position: -35px -5px; }
+.jssorb13 .av { background-position: -65px -5px; }
+.jssorb13 .dn, .jssorb13 .dn:hover { background-position: -95px -5px; }

@@ -17,13 +17,6 @@
     <link href="css/styles.css" rel="stylesheet">
     <link type="text/css" media="screen" rel="stylesheet" href="css/responsive-tables.css" />
     <style type="text/css" media="screen"></style>
-    <link rel="stylesheet" type="text/css" media="screen" href="//cdnjs.cloudflare.com/ajax/libs/fancybox/1.3.4/jquery.fancybox-1.3.4.css" />
-    <style type="text/css">
-        a.fancybox img {
-            border: none;
-            box-shadow: 0 1px 7px rgba(0,0,0,0.6);
-        } 
-    </style>    
     <!-- Google Analytics -->
     <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -740,7 +733,9 @@
             <div class="container">
                 <div class="maia-cols">
                     <div class="maia-col-12">
-                        <div id="honor">
+                        <div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 100vw; height: 100vh; overflow: hidden; visibility: hidden;">
+                            <div id="honor" data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 100vw; height: 100vh; overflow: hidden;">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -753,9 +748,9 @@
                     <div class="maia-col-6">
                         <div class="wrap">
                             <div id="map-lrg-wrap">
-                                <img id="map-lrg-bg" class="photo" src="https://maps.googleapis.com/maps/api/staticmap?center=台灣台北市松山區健康路八巷七號一樓&zoom=16&language=zh-TW&markers=size:medium%7Ccolor:blue%7C台灣台北市松山區健康路八巷七號一樓&size=504x513&key=AIzaSyA5s3HxPwOmAtptJOtmxYxdvw8vraLaQDI&sensor=false" />
+                                <img id="map-lrg-bg" class="photo" src="//maps.googleapis.com/maps/api/staticmap?center=台灣台北市松山區健康路八巷七號一樓&zoom=16&language=zh-TW&markers=size:medium%7Ccolor:blue%7C台灣台北市松山區健康路八巷七號一樓&size=504x513&key=AIzaSyA5s3HxPwOmAtptJOtmxYxdvw8vraLaQDI&sensor=false" />
                             </div>
-                                <img id="map-sm" class="photo" src="https://maps.googleapis.com/maps/api/staticmap?center=台灣台北市松山區健康路八巷七號一樓&zoom=16&language=zh-TW&markers=size:medium%7Ccolor:blue%7C台灣台北市松山區健康路八巷七號一樓&size=600x300&key=AIzaSyA5s3HxPwOmAtptJOtmxYxdvw8vraLaQDI&sensor=false" />
+                                <img id="map-sm" class="photo" src="//maps.googleapis.com/maps/api/staticmap?center=台灣台北市松山區健康路八巷七號一樓&zoom=16&language=zh-TW&markers=size:medium%7Ccolor:blue%7C台灣台北市松山區健康路八巷七號一樓&size=600x300&key=AIzaSyA5s3HxPwOmAtptJOtmxYxdvw8vraLaQDI&sensor=false" />
                          </div>
                     </div>
                     <div class="maia-col-1">
@@ -806,8 +801,8 @@
     </div>
     <!-- END: #page-wrap -->
 
-    <!-- jQuery -->
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+    <!-- JS libs -->
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.2/jquery.scrollTo.min.js"></script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-localScroll/1.4.0/jquery.localScroll.min.js"></script>
@@ -853,32 +848,49 @@
 
             // Honors
             for (var i = 1; i < 13; i++) {
-                $('#honor').append('<img class="fancybox" src="img/honors/'+i+'.jpg" />');
+                $('#honor').append('<div style="display: none;"><img data-u="image" src="img/honors/'+i+'.jpg" /></div>');
             }
         });
     </script>
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.2.1/jquery-migrate.min.js"></script>
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/fancybox/1.3.4/jquery.fancybox-1.3.4.pack.min.js"></script>
-    <script type="text/javascript">
-        $(function($){
-            var addToAll = false;
-            var gallery = true;
-            var titlePosition = 'inside';
-            $(addToAll ? 'img' : 'img.fancybox').each(function(){
-                var $this = $(this);
-                var title = $this.attr('title');
-                var src = $this.attr('data-big') || $this.attr('src');
-                var a = $('<a href="#" class="fancybox"></a>').attr('href', src).attr('title', title);
-                $this.wrap(a);
-            });
-            if (gallery)
-                $('a.fancybox').attr('rel', 'fancyboxgallery');
-            $('a.fancybox').fancybox({
-                titlePosition: titlePosition
-            });
+    <script type="text/javascript" src="js/jssor.slider.mini.js"></script>
+    <script>
+        jQuery(document).ready(function ($) {
+            
+            var jssor_1_SlideshowTransitions = [
+              {$Duration:1200,$Opacity:2}
+            ];
+            
+            var jssor_1_options = {
+              $AutoPlay: true,
+              $FillMode: 5,
+              $SlideshowOptions: {
+                $Class: $JssorSlideshowRunner$,
+                $Transitions: jssor_1_SlideshowTransitions,
+                $TransitionsOrder: 1
+              },
+            };
+            
+            var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+            
+            //responsive code begin
+            //you can remove responsive code if you don't want the slider scales while window resizing
+            function ScaleSlider() {
+                var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
+
+                if (refSize) {
+                    refSize = Math.min(refSize, 650);
+                    jssor_1_slider.$ScaleHeight(refSize);
+                }
+                else {
+                    window.setTimeout(ScaleSlider, 30);
+                }
+            }
+            ScaleSlider();
+            $(window).bind("load", ScaleSlider);
+            $(window).bind("resize", ScaleSlider);
+            $(window).bind("orientationchange", ScaleSlider);
+            //responsive code end
         });
-        $.noConflict();
     </script>
     </body>
 </html>
