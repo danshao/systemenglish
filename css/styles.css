@@ -1103,7 +1103,7 @@ nav ul li a:hover span.tw, ul li a span.en {
 #honor img {
   /* Just in case there are inline attributes */
   width: 100% !important;
-  height: auto !important;
+  height: 100% !important;
 }
 
 @media (max-width: 1200px) {
