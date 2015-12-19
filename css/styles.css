@@ -1128,7 +1128,7 @@ nav ul li a:hover span.tw, ul li a span.en {
 }
 
 .ticker-container {
-  height: 80px;
+  height: 60px;
   width: 100%;
   text-align: center;
   position: relative;
@@ -1137,6 +1137,7 @@ nav ul li a:hover span.tw, ul li a span.en {
   color: white;
   /*background-color: white;
   color: black;*/
+  font-size: 1.1em;
   margin-bottom: 15px;
 }
 .ticker-container .ticker-caption {
@@ -1146,7 +1147,7 @@ nav ul li a:hover span.tw, ul li a span.en {
   display: table;
   position: absolute;
   color: white;
-  font-size: 1em;
+  font-size: 0.8em;
   z-index: 1;
 }
 .ticker-container .ticker-caption p {
@@ -1168,8 +1169,8 @@ nav ul li a:hover span.tw, ul li a span.en {
   display: inline;
   min-width: 100%;
   left: 0;
-  height: 75%;
-  font-size: 1.2em;
+  height: 50%;
+  font-size: 1.1em;
   transition: 0.25s ease-in-out;
 }
 .ticker-container ul div.ticker-active {
