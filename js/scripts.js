@@ -30,7 +30,7 @@ $(function(){
     if (Modernizr.touch && $(window).outerHeight() <= 480) return;
     if($('#main-nav').hasClass('top-fixed')) return;
 
-    var anchors = $('#home, #about, #class, #teacher, #contact');
+    var anchors = $('#home, #notices, #about, #class, #teacher, #honors #contact');
 
     $.each(anchors, function(){
       var currentSection = elementInViewport(this, $(window).scrollTop()),
