@@ -253,39 +253,9 @@ $(function(){
         pagination: false,
         generatePagination: false
       });
-
-    $("#slider2").slidesjs({
-      navigation: {
-        active: false,
-        effect: "fade"
-      },
-      play: {
-        active: false,
-        effect: "slide",
-        auto: true
-      },
-      pagination: false,
-      generatePagination: false
-    });
   } 
   initialize();
 
 });
 
-    /*
-   var mapOptions = {
-      zoom: 11,
-      center: new google.maps.LatLng(36.175574,-115.392151),
-      disableDefaultUI: true,
-      mapTypeId: google.maps.MapTypeId.SATELLITE,
-      panControl:false,
-      zoomControl:false,
-      mapTypeControl:false,
-      scaleControl:false,
-      streetViewControl:false,
-      overviewMapControl:false,
-      rotateControl:false
-    };
 
-    var map = new google.maps.Map(document.getElementById('header-map'), mapOptions);
-    */
