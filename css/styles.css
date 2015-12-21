@@ -1170,7 +1170,7 @@ nav ul li a:hover span.tw, ul li a span.en {
   min-width: 100%;
   left: 0;
   height: 50%;
-  font-size: 1.1em;
+  font-size: 1em;
   transition: 0.25s ease-in-out;
 }
 .ticker-container ul div.ticker-active {
