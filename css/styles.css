@@ -413,11 +413,23 @@ footer a {
   background-position: bottom left;
 }
 
+#contact div{
+  height: 80vh;
+}
+
 #contact .location {
   font-weight: 600;
   padding-left: 20px;
   border-left: 2px solid #f8b23c;
   margin-bottom: 20px;
+  height: 18vh;
+}
+
+#contact .social {
+  font-weight: 600;
+  padding-left: 0px;
+  margin-bottom: 0px;
+  height: 50vh;  
 }
 
 #map-sm {

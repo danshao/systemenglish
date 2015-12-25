@@ -17,6 +17,26 @@
     <link href="css/styles.css" rel="stylesheet">
     <link type="text/css" media="screen" rel="stylesheet" href="css/responsive-tables.css" />
     <style type="text/css" media="screen"></style>
+
+    <!-- Facebook -->
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '1106135032754746',
+          xfbml      : true,
+          version    : 'v2.5'
+        });
+      };
+
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "https://connect.facebook.net/en_US/sdk.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+    </script>
+
     <!-- Google Analytics -->
     <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -809,27 +829,14 @@
                                     <br />
                                     thesystemenglishschool@gmail.com<br />
                                     +886 2 2716 4335<br />
-                                    <!-- +886 2 2545 2110 --> 
                                 </div>
-                                <form id = "contactForm" method = "post" action = "submit.php">
-                                    <div class="maia-cols-2">
-                                        <label class="inline">姓名</label>
-                                    </div>
-                                    <div class="maia-cols-10">
-                                        <input type="text" name="name" id="name" placeholder="您的姓名" required>
-                                    </div>
-                                    <div class="maia-cols-2">
-                                        <label class="inline">E-mail</label>
-                                    </div>
-                                    <div class="maia-cols-10">
-                                        <input type="text" name="email" id="email" placeholder="E-Mail" required>
-                                    </div>
-                                    <div class="maia-cols-10">
-                                        <label>詢問內容</label>
-                                        <textarea rows="10" name="message" id="message" required></textarea>
-                                    </div>  
-                                    <button type="submit" id="submit" class="maia-button">送出訊息</button>
-                                </form>
+                                <div class="social">
+                                <div
+  class="fb-like"
+  data-share="true"
+  data-width="450"
+  data-show-faces="true">
+</div>
                             </div>
                         </div>
                     </div>
@@ -890,43 +897,6 @@
                menuItems
                  .parent().removeClass("active")
                  .end().filter("[href=#"+id+"]").parent().addClass("active");
-            });
-
-            // Contact Form
-            ///////////////
-            ///////////////
-
-            $('#contactForm #submit').click(function() {
-                // Get the data from the form
-                var name=$('#contactForm #name').val();
-                var email=$('#contactForm #email').val();
-                var message=$('#contactForm #message').val();
-
-                $.ajaxSetup ({
-                    cache: false
-                });
-                
-                var dataString = 'name='+ name + '&email=' + email + '&message=' + message;
-                $.ajax({
-                    type: "POST",
-                    url: "api/submit.php",
-                    data: dataString,
-                    success: function(msg) {
-                        // Check to see if the mail was successfully sent
-                        if(msg=='Mail sent') {
-                            alert('Message Sent.')
-                        } else {
-                            alert('Please fill out the form completely.');
-                        }
-                    },
-                    error: function(ob,errStr) {
-                        // $('#contactForm #formProgress').html('');
-                        alert('There was an error sending your email. Please try again.');
-                        // Activate the submit button
-                        // $('#contactForm #submit').attr("disabled", "");
-                    }
-                });
-                return false;
             });
 
             // Honors
