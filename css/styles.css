@@ -432,6 +432,10 @@ footer a {
   height: 50vh;  
 }
 
+#contact .fb-page {
+  height: 70px;
+}
+
 #map-sm {
   display: none;
 }
