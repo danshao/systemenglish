@@ -413,10 +413,6 @@ footer a {
   background-position: bottom left;
 }
 
-#contact div{
-  height: inherit;
-}
-
 #contact .location {
   font-weight: 600;
   padding-left: 20px;
@@ -427,11 +423,7 @@ footer a {
 #contact .social {
   font-weight: 600;
   padding-left: 0px;
-  margin-bottom: 0px; 
-}
-
-#contact .fb-page {
-  height: 70px;
+  margin-bottom: 50px;  
 }
 
 #map-sm {
