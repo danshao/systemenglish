@@ -1065,8 +1065,8 @@ footer a {
     position: absolute;
     top: 20px;
     left: 30px;
-    width: 504px;
-    height: 513px;
+    width: 550px;
+    height: 400px;
     overflow: hidden;
   }
   #map-lrg {
@@ -1078,8 +1078,8 @@ footer a {
     position: absolute;
     top: -15px;
     left: -22px;
-    width: 504px;
-    height: 513px;
+    width: 550px;
+    height: 400px;
     z-index: 19;
 
   }
