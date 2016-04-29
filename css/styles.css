@@ -426,23 +426,6 @@ footer a {
   margin-bottom: 50px;  
 }
 
-#contact .line {
-  vertical-align: top;
-  display: inline-block;
-  text-align: center;
-  width: 200px;
-}
-
-#contact .line img {
-    width: 100px;
-    height: 100px;
-    background-color: grey;
-}
-
-#contact .line .caption {
-    display: block;
-}
-
 #map-sm {
   display: none;
 }
