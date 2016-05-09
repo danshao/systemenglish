@@ -2,7 +2,7 @@
 <!--[if lte IE 7]><html class="ie7 dinosaur no-js" dir="ltr" lang="en-US"><![endif]-->
 <!--[if IE 8]><html class="ie8" dir="ltr" lang="en-US"><![endif]-->
 <!--[if gt IE 8]><!--><html dir="ltr" lang="en-US"> <!--<![endif]-->
-<head>
+  <head>
     <meta charset="utf-8">
     <title>The System English School 西斯頓美語文理補習班 </title>
     <meta name=description content="">
@@ -128,14 +128,14 @@
                                     </tr>
                                     <tr>
                                         <td>基礎班二</td>
-                                        <td>ㄧ，四</td>
+                                        <td>一，四</td>
                                         <td>5-7點</td>
                                     </tr>
                                 </table>
                             </div>
                             <div class="location">
                                 <br />
-                                仁愛路四段300巷20弄14號一樓樓 (捷運信義安和站)<br />
+                                仁愛路四段300巷20弄14號一樓 (捷運信義安和站)<br />
                                 大安區 台北市 106<br />
                                 (02) 2701-2305
                                 <br />
@@ -907,98 +907,96 @@
         </footer>
     </div>
     <!-- END: #page-wrap -->
+  </body>
+  <!-- JS libs -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.2/jquery.scrollTo.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-localScroll/1.4.0/jquery.localScroll.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+  <script type="text/javascript" src="js/jquery.fixed-nav.js"></script>
+  <script type="text/javascript" src="js/responsive-tables.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slidesjs/3.0/jquery.slides.min.js"></script>
+  <script type="text/javascript" src="js/scripts.js"></script>
+  <script type="text/javascript" src="js/jssor.slider.mini.js"></script>
+  <script type="text/javascript" src="js/ticker.js"></script>
+  <script type="text/javascript">
+      $(document).ready(function() {
+          // Change Menu Selection / Page Scroll
+          //////////////////////////////////////
+          //////////////////////////////////////
+          
+          // Cache selectors
+          var topMenu = $("#top-menu"),
+              topMenuHeight = topMenu.outerHeight()+15,
+              // All list items
+              menuItems = topMenu.find("a"),
+              // Anchors corresponding to menu items
+              scrollItems = menuItems.map(function(){
+                var item = $($(this).attr("href"));
+                if (item.length) { return item; }
+              });
 
-    <!-- JS libs -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.2/jquery.scrollTo.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-localScroll/1.4.0/jquery.localScroll.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-    <script type="text/javascript" src="js/jquery.fixed-nav.js"></script>
-    <script type="text/javascript" src="js/responsive-tables.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slidesjs/3.0/jquery.slides.min.js"></script>
-    <script type="text/javascript" src="js/scripts.js"></script>
-    <script type="text/javascript" src="js/jssor.slider.mini.js"></script>
-    <script type="text/javascript" src="js/ticker.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function() {
-            // Change Menu Selection / Page Scroll
-            //////////////////////////////////////
-            //////////////////////////////////////
-            
-            // Cache selectors
-            var topMenu = $("#top-menu"),
-                topMenuHeight = topMenu.outerHeight()+15,
-                // All list items
-                menuItems = topMenu.find("a"),
-                // Anchors corresponding to menu items
-                scrollItems = menuItems.map(function(){
-                  var item = $($(this).attr("href"));
-                  if (item.length) { return item; }
-                });
+          // Bind to scroll
+          $(window).scroll(function(){
+             // Get container scroll position
+             var fromTop = $(this).scrollTop()+topMenuHeight;
 
-            // Bind to scroll
-            $(window).scroll(function(){
-               // Get container scroll position
-               var fromTop = $(this).scrollTop()+topMenuHeight;
+             // Get id of current scroll item
+             var cur = scrollItems.map(function(){
+               if ($(this).offset().top < fromTop)
+                 return this;
+             });
+             // Get the id of the current element
+             cur = cur[cur.length-1];
+             var id = cur && cur.length ? cur[0].id : "";
+             // Set/remove active class
+             menuItems
+               .parent().removeClass("active")
+               .end().filter("[href=#"+id+"]").parent().addClass("active");
+          });
 
-               // Get id of current scroll item
-               var cur = scrollItems.map(function(){
-                 if ($(this).offset().top < fromTop)
-                   return this;
-               });
-               // Get the id of the current element
-               cur = cur[cur.length-1];
-               var id = cur && cur.length ? cur[0].id : "";
-               // Set/remove active class
-               menuItems
-                 .parent().removeClass("active")
-                 .end().filter("[href=#"+id+"]").parent().addClass("active");
-            });
+          // Honors
+          /////////
+          /////////
 
-            // Honors
-            /////////
-            /////////
+          for (var i = 1; i < 13; i++) {
+              $('#honor').append('<div style="display: none;"><img data-u="image" src="img/honors/'+i+'.jpg" /></div>');
+          }
+          
+          var jssor_1_SlideshowTransitions = [
+            {$Duration:1200,$Opacity:2}
+          ];
+          
+          var jssor_1_options = {
+            $AutoPlay: true,
+            $FillMode: 5,
+            $SlideshowOptions: {
+              $Class: $JssorSlideshowRunner$,
+              $Transitions: jssor_1_SlideshowTransitions,
+              $TransitionsOrder: 1
+            },
+          };
+          
+          var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+          
+          //responsive code begin
+          function ScaleSlider() {
+              var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
 
-            for (var i = 1; i < 13; i++) {
-                $('#honor').append('<div style="display: none;"><img data-u="image" src="img/honors/'+i+'.jpg" /></div>');
-            }
-            
-            var jssor_1_SlideshowTransitions = [
-              {$Duration:1200,$Opacity:2}
-            ];
-            
-            var jssor_1_options = {
-              $AutoPlay: true,
-              $FillMode: 5,
-              $SlideshowOptions: {
-                $Class: $JssorSlideshowRunner$,
-                $Transitions: jssor_1_SlideshowTransitions,
-                $TransitionsOrder: 1
-              },
-            };
-            
-            var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
-            
-            //responsive code begin
-            function ScaleSlider() {
-                var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
-
-                if (refSize) {
-                    refSize = Math.min(refSize, 650);
-                    jssor_1_slider.$ScaleHeight(refSize);
-                }
-                else {
-                    window.setTimeout(ScaleSlider, 30);
-                }
-            }
-            ScaleSlider();
-            $(window).bind("load", ScaleSlider);
-            $(window).bind("resize", ScaleSlider);
-            $(window).bind("orientationchange", ScaleSlider);
-            //responsive code end
-        });
-    </script>
-
-    </body>
+              if (refSize) {
+                  refSize = Math.min(refSize, 650);
+                  jssor_1_slider.$ScaleHeight(refSize);
+              }
+              else {
+                  window.setTimeout(ScaleSlider, 30);
+              }
+          }
+          ScaleSlider();
+          $(window).bind("load", ScaleSlider);
+          $(window).bind("resize", ScaleSlider);
+          $(window).bind("orientationchange", ScaleSlider);
+          //responsive code end
+      });
+  </script>
 </html>
